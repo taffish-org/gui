@@ -10,7 +10,7 @@ ARGS
         c   container
         p   5809
 RUN
-    <::ctype:::taf-gui-v1.0.0:ghcr.io/taffish-org/juicebox:3.1.4$::pset::>
+    <::ctype:::taf-gui-v1.0.0:ghcr.io/taffish-org/gui:1.0.0$::pset::>
         export HOME=/root
         mkdir -p /root/.vnc
         echo "::passwd::" | vncpasswd -f > /root/.vnc/passwd
