@@ -7,7 +7,7 @@ ARGS
         pset          -p ::port:::5801
     <opts-default>
         pd  12345678
-        c   $$if ( podman ps > /dev/null 2>&1 ); then echo 'podman'; else echo 'docker'; fi$$
+        c   container
         p   5809
 RUN
     <::ctype:::taf-gui-v1.0.0:ghcr.io/taffish-org/juicebox:3.1.4$::pset::>
