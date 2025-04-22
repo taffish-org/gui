@@ -37,7 +37,7 @@ For the gui mode, we do it together with [noVNC](https://github.com/novnc/noVNC)
 
   <img width="1448" alt="image" src="https://github.com/user-attachments/assets/528e28e8-a082-4fd3-ae43-190b0497cbae" />
   
-### 4. Open the terminal in the GUI and enter juicebox to open juicebox in the GUI interface
+### 4. Open the terminal in the GUI and enter the gui command to open your app by gui in the GUI interface
 
   <img width="1449" alt="image" src="https://github.com/user-attachments/assets/fe2cd3d5-1a14-43ee-a3b7-42bd2bebe629" />
   
