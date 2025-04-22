@@ -1,0 +1,7 @@
+(:name           "gui")
+(:repo           "taffish-org/gui")
+(:author         "KaiyuanHan")
+(:version        "1.0.0")
+(:intro          "Use VNC and no VNC to support gui for taf apps")
+(:dependencies)
+(:functions      "[vnc]")

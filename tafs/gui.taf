@@ -1,0 +1,25 @@
++TOOL:gui
+ARGS
+    <opts>
+        passwd        ::pd::            # [default 12345678]
+        ctype         ::c::             # container type     [default container]
+        port          ::p::             # port for http gui  [default 5809]
+        pset          -p ::port:::5801
+    <opts-default>
+        pd  12345678
+        c   $$if ( podman ps > /dev/null 2>&1 ); then echo 'podman'; else echo 'docker'; fi$$
+        p   5809
+RUN
+    <::ctype:::taf-gui-v1.0.0:ghcr.io/taffish-org/juicebox:3.1.4$::pset::>
+        export HOME=/root
+        mkdir -p /root/.vnc
+        echo "::passwd::" | vncpasswd -f > /root/.vnc/passwd
+        chmod 600 /root/.vnc/passwd
+        vncserver :1 -geometry 1280x720 -depth 24
+        /noVNC/utils/novnc_proxy --vnc localhost:5901 --listen 5801 &
+        dbus-launch startxfce4 &
+        sleep 3
+        echo ''
+        echo '>>> TAFFISH-GUI ===> http://localhost:'"::port::"'/vnc.html <<<'
+        echo ''
+        cd /root/

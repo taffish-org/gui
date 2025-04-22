@@ -1,0 +1,9 @@
+# <gui:1.0.0 | KaiyuanHan | 2025-04-22>
+Usage:
+    (gui)> [http://localhost:{port}/vnc.html] with passwd: 12345678
+Opts:
+    --p, --port     # set the port for http gui  [default 5809]          (only be set once when you first run taf-juicebox)
+    --c, --ctype    # container type             [default podman>docker] (only podman & docker can use gui)
+    --pd, --passwd  # set password of VNC        [default 12345678]
+Note:
+    you can run 'taf-gui --c podman/docker' once, then goto [http://localhost:{port}/vnc.html] to use gui
